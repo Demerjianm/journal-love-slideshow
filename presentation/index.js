@@ -4,7 +4,7 @@ import React from "react";
 // Import Spectacle Core tags
 //add future Feature Slide
 //add roadblock slide
-//add redux tech stack
+//add redux tech stack x
 //dont forget to invite back to booth
 //increase size of everything
 //MA says red on grey no good
@@ -62,7 +62,7 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: '#ff0000',
+  primary: 'white',
   //primary: "#9932CC",
   secondary: '#929599',
   //secondary: "#1F2022",
@@ -94,15 +94,15 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="quartenary">
             <Image src={images.jllogo} height='200px' />
-            <Heading size={6}>
-              'https://capstone-journal-dpl.herokuapp.com/'
+            <Heading size={5}>
+              https://capstone-journal-dpl.herokuapp.com/
             </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={4} textColor="primary" caps>Our Team</Heading>
+          <Heading size={3} textColor="primary" caps>Our Team</Heading>
           <Layout>
-          <List textAlign="center">
+          <List fontWeight='bold' textAlign="center">
             <ListItem padding='5px'>Sammie Worthen<Image src={images.sammieimg} height='105px' /></ListItem>
             <ListItem padding='5px'>Michael Demerjian<Image src={images.michaelimg} height='105px'  /></ListItem>
             <ListItem padding='5px'>Shannon<Image src={images.shannonimg} height='105px' /> </ListItem>
@@ -112,9 +112,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="black">
-          <Heading size={4} textColor='black'>Why you need it</Heading>
+          <Heading size={3} textColor='black'>Why you need it</Heading>
             <Appear>
-            <Text textColor='primary'>Arent you tired of losing your journal in every fire or natural disaster?</Text>
+            <Text fontWeight='bold' textColor='primary'>Arent you tired of losing your journal in every fire or natural disaster?</Text>
             </Appear>
             <List textAlign="center">
               <Appear><ListItem>Cloud based</ListItem></Appear>
@@ -125,22 +125,22 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={4} textColor='primary' justifyContent='left'>Adding a Entry</Heading>
+          <Heading size={3} textColor='primary' justifyContent='left'>Adding a Entry</Heading>
               <Image src={images.addEntry} height='525px' />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={4} textColor='primary' align="flex-start flex-start" textAlign="left">Editing a Entry</Heading>
+          <Heading size={3} textColor='primary' align="flex-start flex-start" textAlign="left">Editing a Entry</Heading>
             <Image src={images.updateEntry} height='525px' />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={4} textColor='primary'>Full Journal History</Heading>
+          <Heading size={3} textColor='primary'>Full Journal History</Heading>
             <Image src={images.historyFeature} height='525px' />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={4} textColor='primary'>Slideshow Feature</Heading>
+          <Heading size={3} textColor='primary'>Slideshow Feature</Heading>
             <Image src={images.slideshowFeature} height='525px' />
         </Slide>
 
@@ -159,7 +159,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom"]} bgColor="quartenary">
             <Image src={images.jllogo} height='200px' />
             <Heading size={4}>
-              www.journal-love.com
+              https://capstone-journal-dpl.herokuapp.com/
             </Heading>
         </Slide>
 
