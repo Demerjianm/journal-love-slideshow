@@ -4,11 +4,9 @@ import React from "react";
 // Import Spectacle Core tags
 //add future Feature Slide
 //add roadblock slide
-//add redux tech stack x
 //dont forget to invite back to booth
-//increase size of everything
-//MA says red on grey no good
-//put my name first
+
+
 
 import {
   BlockQuote,
@@ -23,7 +21,12 @@ import {
   Image,
   Code,
   Appear,
-  Layout
+  Layout,
+  Grid,
+  Table,
+  TableBody,
+  TableRow,
+  TableItem
 } from "spectacle";
 
 // Import image preloader util
@@ -93,73 +96,93 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="quartenary">
-            <Image src={images.jllogo} height='200px' />
+            <Image src={images.jllogo} height='350px' />
             <Heading size={5}>
-              https://capstone-journal-dpl.herokuapp.com/
+              tinyurl.com/journal-love-capstone
             </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={3} textColor="primary" caps>Our Team</Heading>
-          <Layout>
-          <List fontWeight='bold' textAlign="center">
-            <ListItem padding='5px'>Sammie Worthen<Image src={images.sammieimg} height='105px' /></ListItem>
-            <ListItem padding='5px'>Michael Demerjian<Image src={images.michaelimg} height='105px'  /></ListItem>
-            <ListItem padding='5px'>Shannon<Image src={images.shannonimg} height='105px' /> </ListItem>
-            <ListItem padding='5px'>Justin<Image src={images.michaelimg} height='105px' /></ListItem>
-          </List>
-          </Layout>
-        </Slide>
+          <Heading size={1} textColor="primary" caps padding={6}>Our Team</Heading>
+          <Table>
+              <TableBody>
+                <TableRow>
+                  <Appear fid="1">
+                    <TableItem>
+                      <Image src={images.michaelimg} height='175px'  />
+                      <Text size={1}>Michael Demerjian</Text>
+                    </TableItem>
+                  </Appear>
+                  <Appear fid="2">
+                    <TableItem>
+                      <Image src={images.sammieimg} height='175px' />
+                      <Text size={1}>Sammie Worthen</Text>
+                    </TableItem>
+                  </Appear>
+                </TableRow>
+                <TableRow>
+                  <Appear fid="1">
+                    <TableItem>
+                      <Image src={images.shannonimg} height='175px' />
+                      <Text size={1}>Shannon</Text>
+                    </TableItem>
+                  </Appear>
+                  <Appear fid="2">
+                <TableItem>
+                      <Image src={images.michaelimg} height='175px' />
+                      <Text size={1}>Justin</Text>
+                    </TableItem>
+                  </Appear>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Slide>
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="black">
-          <Heading size={3} textColor='black'>Why you need it</Heading>
+          <Heading size={2} textColor='black'>Why you need it</Heading>
             <Appear>
-            <Text fontWeight='bold' textColor='primary'>Arent you tired of losing your journal in every fire or natural disaster?</Text>
+            <Text fontWeight='bold' textColor='primary' textSize='40px'>Arent you tired of losing your journal in every fire or natural disaster?</Text>
             </Appear>
             <List textAlign="center">
-              <Appear><ListItem>Cloud based</ListItem></Appear>
-              <Appear><ListItem>Fire Proof</ListItem></Appear>
-              <Appear><ListItem>Secure</ListItem></Appear>
-              <Appear><ListItem>Weather Proof</ListItem></Appear>
+              <Appear><ListItem textSize='70px'>Cloud based</ListItem></Appear>
+              <Appear><ListItem textSize='70px'>Fire Proof</ListItem></Appear>
+              <Appear><ListItem textSize='70px'>Secure</ListItem></Appear>
+              <Appear><ListItem textSize='70px'>Weather Proof</ListItem></Appear>
             </List>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={3} textColor='primary' justifyContent='left'>Adding a Entry</Heading>
-              <Image src={images.addEntry} height='525px' />
+        <Slide transition={["fade"]} bgImage={images.addEntry}>
+          
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={3} textColor='primary' align="flex-start flex-start" textAlign="left">Editing a Entry</Heading>
-            <Image src={images.updateEntry} height='525px' />
+        <Slide transition={["fade"]} bgImage={images.updateEntry}>
+            
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={3} textColor='primary'>Full Journal History</Heading>
-            <Image src={images.historyFeature} height='525px' />
+        <Slide transition={["fade"]} bgImage={images.historyFeature}>
+          
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={3} textColor='primary'>Slideshow Feature</Heading>
-            <Image src={images.slideshowFeature} height='525px' />
+        <Slide transition={["fade"]} bgImage={images.slideshowFeature}>
+          
         </Slide>
 
 
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-        <Heading size={3} textColor='primary'>Technology Used</Heading>
-          <Image src={images.herokulogo} height='140px' margin='20px'/>
-          <Image src={images.reactlogo} height='140px' margin='20px'/>
-          <Image src={images.nodelogo} height='140px' margin='20px'/>
-          <Image src={images.mongodblogo} height='140px' margin='20px'/>
-          <Image src={images.jslogo} height='140px' margin='20px'/>
-          <Image src={images.cloudinarylogo} height='140px' margin='20px'/>
-          <Image src={images.reduxlogo} height='140px' margin='20px'/>
+        <Heading size={2} textColor='black'>Technology Used</Heading>
+          <Image src={images.herokulogo} height='160px' margin='20px'/>
+          <Image src={images.reactlogo} height='160px' margin='20px'/>
+          <Image src={images.nodelogo} height='160px' margin='20px'/>
+          <Image src={images.mongodblogo} height='160px' margin='20px'/>
+          <Image src={images.jslogo} height='160px' margin='20px'/>
+          <Image src={images.cloudinarylogo} height='160px' margin='20px'/>
+          <Image src={images.reduxlogo} height='160px' margin='20px'/>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="quartenary">
             <Image src={images.jllogo} height='200px' />
-            <Heading size={4}>
-              https://capstone-journal-dpl.herokuapp.com/
+            <Heading size={5}>
+              tinyurl.com/journal-love-capstone
             </Heading>
         </Slide>
 
