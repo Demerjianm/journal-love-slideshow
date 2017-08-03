@@ -59,7 +59,8 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  justinimg: require("../assets/justin.png")
 };
 
 preloader(images);
@@ -96,7 +97,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="quartenary">
-            <Image src={images.jllogo} height='350px' />
+            <Image src={images.jllogo} height='400px' />
             <Heading size={5}>
               tinyurl.com/journal-love-capstone
             </Heading>
@@ -129,7 +130,7 @@ export default class Presentation extends React.Component {
                   </Appear>
                   <Appear fid="2">
                 <TableItem>
-                      <Image src={images.michaelimg} height='175px' />
+                      <Image src={images.justinimg} height='175px' />
                       <Text size={1}>Justin</Text>
                     </TableItem>
                   </Appear>
@@ -148,6 +149,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem textSize='70px'>Fire Proof</ListItem></Appear>
               <Appear><ListItem textSize='70px'>Secure</ListItem></Appear>
               <Appear><ListItem textSize='70px'>Weather Proof</ListItem></Appear>
+              <Appear><ListItem textSize='70px'>Personable</ListItem></Appear>
             </List>
         </Slide>
 
